@@ -1,0 +1,87 @@
+
+local PabloLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BatuKvi123/PabloLibV3/main/PabloLibV3"))()
+local window = PabloLib:Create(
+"Raptor hub", -- Name here.
+"Enabled", -- If you want draggable set here to "Enabled" if you dont want set to "Disabled".
+"p" -- You can put any keybind here to open close.
+)
+local tab1 = window:CreateTab("animal simulator")
+tab1:CreateButton("execute", function()
+loadstring(game:HttpGet("https://bmacaveli.link/BitchYouMissed"))()
+end)
+tab1:CreateButton("auto kill", function()
+print('Hello World!');while true do
+    local localPlayer = game:GetService("Players").LocalPlayer -- Récupérer le joueur local
+
+    -- Vérifier si le joueur local a un personnage avec un Humanoid
+    if localPlayer.Character and localPlayer.Character:FindFirstChild("Humanoid") then
+        local args = {
+            [1] = "damage",
+            [2] = {
+                ["EnemyHumanoid"] = localPlayer.Character.Humanoid
+            }
+        }
+        -- Envoyer l'événement au serveur
+        game:GetService("ReplicatedStorage").SkillsInRS.RemoteEvent:FireServer(unpack(args))
+    end
+
+    -- Appeler la fonction pour mettre la vie à 0
+    local function setCharacterHealthToZero()
+        local player = game.Players.LocalPlayer
+        local character = player.Character
+
+        -- Vérifie si le joueur et son personnage existent
+        if character and character:FindFirstChild("Humanoid") then
+            character.Humanoid.Health = 0
+        end
+    end
+
+    -- Appeler la fonction pour mettre la vie à 0
+    setCharacterHealthToZero()
+
+    -- Attente de 0,1 seconde avant la prochaine exécution
+    wait(6.1)
+end
+end)
+local tab1 = window:CreateTab("animal sou l'eau")
+tab1:CreateButton("execute", function()
+while true do
+local args = {
+    [1] = {
+        ["action"] = "heart",
+        ["reward"] = "ValOctopus2"
+    }
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("DamageEvent"):FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["action"] = "heart",
+        ["reward"] = "ValOctopus1"
+    }
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("DamageEvent"):FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["action"] = "heart",
+        ["reward"] = "ValStingray2"
+    }
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("DamageEvent"):FireServer(unpack(args))
+local args = {
+    [1] = {
+        ["action"] = "heart",
+        ["reward"] = "ValStingray1"
+    }
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("DamageEvent"):FireServer(unpack(args))
+wait()
+end
+end)
+local tab1 = window:CreateTab("muscle legends")
+tab1:CreateButton("execute", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+end)
